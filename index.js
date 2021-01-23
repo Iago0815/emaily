@@ -12,7 +12,7 @@ const app = express();
 // app.listen: express tells node to listen to port 5000
 
 app.get("/", (req, res) => {
-  res.send({ hi: "there" });
+  res.send({ bye: "buddy" });
 });
 
 //Horku injects environtment variables
