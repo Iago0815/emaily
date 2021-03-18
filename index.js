@@ -7,7 +7,7 @@ const keys = require("./config/keys");
 require("./models/User.js");
 require("./services/passport");
 
-// authRoutes is a function that takes the app object and attaches the 2 routes to it
+// authRoutes is a function that takes the app object and attaches the 2 routes to it and that's it
 
 mongoose.connect(keys.mongoURI);
 
