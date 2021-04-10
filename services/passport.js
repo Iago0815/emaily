@@ -1,7 +1,5 @@
 const passport = require("passport");
 const GoogleStrategy = require("passport-google-oauth20").Strategy;
-const FacebookStrategy = require("passport-facebook").Strategy;
-
 const mongoose = require("mongoose");
 const keys = require("../config/keys");
 
@@ -33,10 +31,9 @@ passport.use(
 
       if (existingUser) {
         done(null, existingUser);
-      } else {
-        const user = await new User({ googleId: profile.id }).save();
-        done(null, user);
       }
+      const user = await new User({ googleId: profile.id }).save();
+      done(null, user);
     }
   )
 );
