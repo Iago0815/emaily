@@ -11,7 +11,11 @@ require("./services/passport");
 
 // authRoutes is a function that takes the app object and attaches the 2 routes to it and that's it
 
-mongoose.connect(keys.mongoURI);
+mongoose.connect(keys.mongoURI, {
+  useNewUrlParser: true,
+  useCreateIndex: true,
+  useUnifiedTopology: true,
+});
 
 const app = express();
 

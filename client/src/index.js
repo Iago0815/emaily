@@ -7,6 +7,8 @@ import reduxThunk from "redux-thunk";
 
 import App from "./components/App";
 import reducers from "./reducers";
+import axios from "axios";
+window.axios = axios;
 
 const store = createStore(reducers, {}, applyMiddleware(reduxThunk));
 
@@ -16,3 +18,8 @@ ReactDOM.render(
   </Provider>,
   document.querySelector("#root")
 );
+
+//sendgrid
+//echo "export SENDGRID_API_KEY='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'" > sendgrid.env
+//echo "sendgrid.env" >> .gitignore
+//source ./sendgrid.env
