@@ -9,6 +9,8 @@ module.exports = {
     "pk_test_51IaoVWDlWSgIVBHSsUEq0sfIsKFJ3I95olQnVKYzIxGNHncHqG7SseZRhaVZBBSSbpYXbL6L8IEJp1cbjc4xCU3400xZtuiDI5",
   stripeSecretKey:
     "sk_test_51IaoVWDlWSgIVBHS4HGfQ1p1vlJH3cmbhVtqUakDlexhWkgJkPn33hySqkCjaaiJIqZPOKwkEA2o7GdxRcoxSsIo00cT38UBUr",
-  sendGridKey:
-    "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",
+  /*sendGridKey:
+    "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",*/
+  mailgunKey: "37b37c94b25a4aecbec9bcc5cf8bd08b-c485922e-7b996c8d",
+  mailgunDomain: "https://emaily.cloudns.ph/",
 };
