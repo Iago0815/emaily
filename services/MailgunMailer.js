@@ -7,7 +7,7 @@ const Mailgun = require("mailgun.js");
 const mailgun = new Mailgun(formData);
 const mg = mailgun.client({
   username: "api",
-  key: process.env.mailgunKey || "key-yourkeyhere",
+  key: process.env.mailgunKey || "key-240e9594ab65aa8482abfcc4ed2a9534",
   url: "https://api.mailgun.net",
 });
 
