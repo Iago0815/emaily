@@ -1,8 +1,9 @@
 const mongoose = require("mongoose");
 const requireLogin = require("../middelwares/requireLogin");
 const requireCredits = require("../middelwares/requireCredits");
-const MailgunMailer = require("../services/MailgunMailer");
-const surveyTemplate = require("../services/emailTemplates/surveyTemplate");
+const SibMailer = require("sib-api-v3-sdk");
+const surveyTemplate =
+  require("../services/emailTemplates/surveyTemplate").default;
 
 const Survey = mongoose.model("surveys");
 
@@ -21,7 +22,7 @@ module.exports = (app) => {
       dateSent: Date.now(),
     });
 
-    const mailer = new MailgunMailer(survey, surveyTemplate(survey));
+    const mailer = new SibMailer(survey, surveyTemplate(survey));
     mailer.send();
   });
 };

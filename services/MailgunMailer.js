@@ -7,14 +7,14 @@ const Mailgun = require("mailgun.js");
 const mailgun = new Mailgun(formData);
 const mg = mailgun.client({
   username: "api",
-  key: process.env.mailgunKey || "key-240e9594ab65aa8482abfcc4ed2a9534",
+  key: process.env.mailgunKey || "key-yourkeyhere",
   url: "https://api.mailgun.net",
 });
 
 class MailgunMailer {
   constructor({ subject, recipients }, content) {
     this.data = {
-      from: "no-reply@YOUR_ADDRESS.com",
+      from: "no-reply@emaily.cloudns.ph",
       to: this.formatAddresses(recipients),
       subject: subject,
       html: content,
